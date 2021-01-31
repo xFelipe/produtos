@@ -25,7 +25,7 @@ def edit(request, product_id):
     if request.method == 'POST':
         form = ProductForm(request.POST)
         if form.is_valid():
-            product = Product(**form.cleaned_data, id=product_id).save()
+            Product(**form.cleaned_data, id=product_id).save()
             return redirect('list')
 
     try:
