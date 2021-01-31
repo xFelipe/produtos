@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar</title>
+</head>
+<body>
+<a href="{% url 'list' %}">Voltar</a>
+<h1>Editar produto</h1>
+<form method="POST"> {% csrf_token %}
+    {{ form }}
+    <br>
+    <input type="submit" value="Salvar">
+</form>
+<form method="POST" action="{% url 'delete' product_id %}"> {% csrf_token %}
+    <input type="submit" value="Deletar">
+</form>
+</body>
+</html>

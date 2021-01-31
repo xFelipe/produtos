@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listagem de produtos</title>
+</head>
+<body>
+<a href="{% url 'new' %}">Cadastrar novo produto</a>
+<h1>Listagem de produtos: </h1>
+
+    <ul>
+        {% for product in products %}
+        <li>
+            <ul>
+                <li>Nome: {{ product.name }}</li>
+                <li>Valor: {{ product.value }}</li>
+                <li>Descrição: {{ product.description }}</li>
+                <a href="{% url 'edit' product.id %}">Editar</a>
+            </ul>
+        </li>
+        <br>
+        {% endfor %}
+    </ul>
+</body>
+</html>

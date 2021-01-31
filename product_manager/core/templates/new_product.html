@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Produtos</title>
+</head>
+<body>
+<a href="{% url 'list' %}">Voltar</a>
+<h1>Cadastro de produto</h1>
+<form action="" method="POST"> {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="Salvar">
+</form>
+</body>
+</html>
