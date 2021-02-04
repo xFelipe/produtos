@@ -14,3 +14,5 @@ Criar usuário root:
 Rotas:
  - Aplicação: `/`
  - API: `/api`
+    - `/api/users/`
+    - `/api/products/`
