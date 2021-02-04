@@ -11,8 +11,7 @@ def list_products(request):
 def new(request):
     if request.method == 'GET':
         return render(request, 'new_product.html',
-                      context={'form': ProductForm(),
-                               'products': list(Product.objects.all())})
+                      context={'form': ProductForm()})
 
     form = ProductForm(request.POST)
     if not form.is_valid():
